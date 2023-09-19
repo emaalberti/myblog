@@ -12,24 +12,20 @@
             align-items: center;
             height: 100vh;
             font-family: Arial, sans-serif;
-            flex-direction: column; /* Stack children vertically */
         }
         button {
-            padding: 50px 50px;
-            border: none;
-            background-color: #007BFF;
-            color: #ffffff;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            font-size: 24px; /* Make the button text bigger */
-            text-align: center; /* Center the button text */
-            width: 250px; /* Specify a width to ensure the text is centered */
-        }
+    padding: 50px 50px;
+    border: none;
+    background-color: #007BFF;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        button:hover {
-            background-color: #0056b3;
-        }
+button:hover {
+    background-color: #0056b3;
+}
 
     </style>
 </head>
@@ -41,9 +37,9 @@
     </div>
     <script>
         document.querySelector('button').addEventListener('click', function() {
-            const challenges = ["5 push ups, hurry!", "tell me what you ate today for lunch, or you drink", "first time in erasmus, drink", "If your name doesn't start with an S, drink", "say at least one name of a Roman king", "single? Drink"];
-            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
-            document.getElementById('randomMessage').textContent = randomMessage;
+            const feelings = ["5 push ups, hurry!", "tell me what you ate today for lunch, or you drink", "first time in erasmus, drink", "If your name doesnt start with an S, drink", "say at least one name of a roman king", "single? Drink"];
+            const randomMessage = feelings[Math.floor(Math.random() * feelings.length)];
+            alert(randomMessage);
         });
     </script>    
 </body>
