@@ -43,7 +43,7 @@
         document.querySelector('button').addEventListener('click', function() {
             const challenges = ["5 push ups, hurry!", "tell me what you ate today for lunch, or you drink", "first time in erasmus, drink", "If your name doesn't start with an S, drink", "say at least one name of a Roman king", "single? Drink"];
             const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
-            alert(randomChallenge);
+            document.getElementById('randomMessage').textContent = randomMessage;
         });
     </script>    
 </body>
