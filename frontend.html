@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emanuele's First Website</title>
-    <title>:)</title>
+    <title>My First Website</title>
     <style>
-        /* This style centers the content on the screen , cndsijbhcisvbdsivbdiuvydkcso*/
+        /* Center content in the middle of the page */
         body {
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f3f4f6;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            flex-direction: column; /* Stack children vertically */
         }
+        button {
+            padding: 50px 50px;
+            border: none;
+            background-color: #007BFF;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 24px; /* Make the button text bigger */
+            text-align: center; /* Center the button text */
+            width: 250px; /* Specify a width to ensure the text is centered */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
-    <p>Here's my first website, I'm Emanuele.</p>
+    <div>
+        <p>Here's my first website, I'm Emanuele</p>
+        <!-- Add the button below the text -->
+        <button>Pick a challenge</button>
+    </div>
+    <script>
+        document.querySelector('button').addEventListener('click', function() {
+            const challenges = ["5 push ups, hurry!", "tell me what you ate today for lunch, or you drink", "first time in erasmus, drink", "If your name doesn't start with an S, drink", "say at least one name of a Roman king", "single? Drink"];
+            const randomChallenge = challenges[Math.floor(Math.random() * challenges.length)];
+            alert(randomChallenge);
+        });
+    </script>    
 </body>
 </html>
